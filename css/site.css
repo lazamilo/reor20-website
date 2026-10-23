@@ -40,7 +40,7 @@
   --mono:"Maison Neue Extended","Maison Neue",-apple-system,BlinkMacSystemFont,"Helvetica Neue",Arial,sans-serif;
   --code:ui-monospace,"SF Mono",Menlo,monospace;
 
-  --radius:20px;          /* images and content boxes inside the page margins */
+  --radius:16px;          /* images and content boxes inside the page margins */
   --max:1320px;
   --gutter:clamp(16px,5vw,72px);
   --sec:clamp(96px,13vw,190px);
