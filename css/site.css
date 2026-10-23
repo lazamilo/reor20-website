@@ -158,7 +158,8 @@ ul,ol{list-style:none}
   linear-gradient(180deg,rgba(4,8,15,.72) 0%,rgba(4,8,15,0) 22%),
   linear-gradient(0deg,rgba(4,8,15,.9) 0%,rgba(4,8,15,0) 30%)}
 .hero-scrim::after{content:"";position:absolute;inset:0;opacity:var(--copy,1);background:linear-gradient(90deg,rgba(4,8,15,.82) 0%,rgba(4,8,15,.45) 38%,rgba(4,8,15,0) 66%)}
-.hero-copy{position:absolute;inset:0;display:flex;flex-direction:column;justify-content:center;padding-top:64px;padding-bottom:120px;will-change:opacity,transform}
+/* no will-change here: it would cut the glass buttons off from the photo behind them */
+.hero-copy{position:absolute;inset:0;display:flex;flex-direction:column;justify-content:center;padding-top:64px;padding-bottom:120px}
 .hero-copy .display{max-width:12.5ch;font-size:min(clamp(2.6rem,1.2rem + 5.6vw,6.9rem),10.4vh)}
 .hero-lead{margin-top:28px;max-width:44ch;font-size:clamp(1.0625rem,1rem + .4vw,1.3125rem);line-height:1.5;color:rgba(238,243,247,.82);text-wrap:pretty}
 .hero-lead strong{display:block;margin-top:10px;font-weight:600;color:var(--white)}
