@@ -272,4 +272,41 @@
   }
   // fonts can change canvas label metrics; redraw once ready
   if (document.fonts && document.fonts.ready) document.fonts.ready.then(() => { if (views.cmp) views.cmp(0); drawAct(0); });
+
+  /* ---------- ?tune: live controls for the secondary (glass) buttons ---------- */
+  if (new URLSearchParams(location.search).has('tune')) {
+    const controls = [
+      { v: '--ghost-blur', label: 'Blur', min: 0, max: 40, step: 1, unit: 'px' },
+      { v: '--ghost-sat', label: 'Saturation', min: 1, max: 2, step: .05, unit: '' },
+      { v: '--ghost-fill', label: 'Fill opacity', min: 0, max: .4, step: .01, unit: '' },
+      { v: '--ghost-border', label: 'Border opacity', min: 0, max: .6, step: .01, unit: '' }
+    ];
+    const css = getComputedStyle(root);
+    const initial = Object.fromEntries(controls.map(c => [c.v, parseFloat(css.getPropertyValue(c.v))]));
+    const panel = document.createElement('aside');
+    panel.className = 'tune';
+    panel.setAttribute('aria-label', 'Secondary button controls');
+    panel.innerHTML = '<div class="tune-head"><b>Secondary buttons</b><button type="button" aria-label="Close controls">×</button></div>' +
+      controls.map((c, i) => `<label for="tune${i}"><span>${c.label}</span><output id="tuneOut${i}"></output><input id="tune${i}" type="range" min="${c.min}" max="${c.max}" step="${c.step}" value="${initial[c.v]}"></label>`).join('') +
+      '<div class="tune-foot"><button type="button" data-act="reset">Reset</button><button type="button" data-act="copy">Copy CSS</button></div><pre id="tuneCss"></pre>';
+    document.body.appendChild(panel);
+    const fmt = (c, n) => c.unit ? n + c.unit : String(+n.toFixed(2));
+    function apply() {
+      const lines = controls.map((c, i) => {
+        const n = +$('#tune' + i).value;
+        root.style.setProperty(c.v, fmt(c, n));
+        $('#tuneOut' + i).textContent = fmt(c, n);
+        return `${c.v}:${fmt(c, n)};`;
+      });
+      $('#tuneCss').textContent = ':root{' + lines.join('') + '}';
+    }
+    $$('input', panel).forEach(r => r.addEventListener('input', apply));
+    $('[data-act=reset]', panel).addEventListener('click', () => { controls.forEach((c, i) => { $('#tune' + i).value = initial[c.v]; }); apply(); });
+    $('[data-act=copy]', panel).addEventListener('click', e => {
+      const b = e.currentTarget, t = $('#tuneCss').textContent;
+      (navigator.clipboard ? navigator.clipboard.writeText(t) : Promise.reject()).then(() => { b.textContent = 'Copied'; setTimeout(() => { b.textContent = 'Copy CSS'; }, 1400); }, () => { getSelection().selectAllChildren($('#tuneCss')); });
+    });
+    $('.tune-head button', panel).addEventListener('click', () => panel.remove());
+    apply();
+  }
 })();
