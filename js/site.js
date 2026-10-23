@@ -66,18 +66,19 @@
     copy.style.transform = `translateY(${(-out * 48).toFixed(1)}px)`;
     copy.style.visibility = out >= 1 ? 'hidden' : 'visible';
     hero.style.setProperty('--copy', (1 - out * .85).toFixed(3));
-    const s = p < .26 ? 0 : p < .54 ? 1 : 2;
-    if (s !== heroStage) {
-      heroStage = s;
-      stages.forEach((li, i) => li.classList.toggle('on', i <= s));
-      legend.classList.toggle('on', s === 2);
-    }
+    // each stage line tracks its own picture: full only once that picture is fully shown
+    [1, flood, wipe].forEach((f, i) => {
+      stages[i].style.setProperty('--fill', f.toFixed(4));
+      stages[i].classList.toggle('on', f >= .995);
+    });
+    const s = wipe >= .995 ? 2 : 0;
+    if (s !== heroStage) { heroStage = s; legend.classList.toggle('on', s === 2); }
   }
   if (reduced) {
     // No scroll-linked choreography: show the simulated-depth frame as a calm still.
     hero.style.height = 'auto';
     lDepth.style.clipPath = 'none';
-    stages.forEach(li => li.classList.add('on'));
+    stages.forEach(li => { li.classList.add('on'); li.style.setProperty('--fill', 1); });
     legend.classList.add('on');
     lDepth.style.opacity = 0; // keep terrain behind headline for legibility
   }

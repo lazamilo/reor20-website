@@ -170,9 +170,10 @@ ul,ol{list-style:none}
 .stages{display:flex;gap:4px}
 .stages li{position:relative;padding:10px 14px 0 0;min-width:118px;font-family:var(--mono);font-weight:700;font-size:.625rem;letter-spacing:.04em;text-transform:uppercase;color:var(--on-d-3);border-top:1px solid var(--line-d2);transition:color .5s var(--ease)}
 .stages li span{display:block;color:inherit;opacity:.7;margin-bottom:2px}
-.stages li::before{content:"";position:absolute;left:0;top:-1px;height:1px;width:0;background:var(--d1);transition:width .6s var(--ease)}
+/* line fill is driven by scroll (--fill 0..1), so it follows the picture exactly */
+.stages li::before{content:"";position:absolute;left:0;top:-1px;height:1px;width:calc(var(--fill,0) * 100%);background:var(--d1)}
+.stages li:first-child{--fill:1}
 .stages li.on{color:var(--on-d)}
-.stages li.on::before{width:100%}
 .legend{display:grid;grid-template-columns:auto 120px;grid-template-rows:auto auto;gap:6px 12px;align-items:center}
 .legend .mono{font-size:.625rem;color:var(--on-d-2)}
 .legend .mono:first-child{grid-row:span 2}
