@@ -66,8 +66,10 @@
     copy.style.transform = `translateY(${(-out * 48).toFixed(1)}px)`;
     copy.style.visibility = out >= 1 ? 'hidden' : 'visible';
     hero.style.setProperty('--copy', (1 - out * .85).toFixed(3));
-    // each stage line tracks its own picture: full only once that picture is fully shown
-    [1, flood, wipe].forEach((f, i) => {
+    // each stage line tracks its own picture. Line 1 fills while the terrain is on
+    // screen alone, reaching 100% exactly as the flood picture starts fading in.
+    const terrain = ramp(p, 0, .16);
+    [terrain, flood, wipe].forEach((f, i) => {
       stages[i].style.setProperty('--fill', f.toFixed(4));
       stages[i].classList.toggle('on', f >= .995);
     });

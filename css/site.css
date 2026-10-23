@@ -172,7 +172,6 @@ ul,ol{list-style:none}
 .stages li span{display:block;color:inherit;opacity:.7;margin-bottom:2px}
 /* line fill is driven by scroll (--fill 0..1), so it follows the picture exactly */
 .stages li::before{content:"";position:absolute;left:0;top:-1px;height:1px;width:calc(var(--fill,0) * 100%);background:var(--d1)}
-.stages li:first-child{--fill:1}
 .stages li.on{color:var(--on-d)}
 .legend{display:grid;grid-template-columns:auto 120px;grid-template-rows:auto auto;gap:6px 12px;align-items:center}
 .legend .mono{font-size:.625rem;color:var(--on-d-2)}
