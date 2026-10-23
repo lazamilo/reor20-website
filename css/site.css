@@ -259,10 +259,11 @@ ul,ol{list-style:none}
 .sol-intro{padding-bottom:clamp(64px,8vw,110px)}
 .sol-intro .lead{margin-top:28px}
 .sol-index{display:grid;grid-template-columns:repeat(3,1fr);margin-top:clamp(56px,7vw,96px);border-top:1px solid var(--line-d2)}
-.sol-index a{display:flex;align-items:baseline;gap:14px;padding:20px 0 0;font-size:clamp(1.25rem,1rem + .9vw,1.75rem);font-weight:600;letter-spacing:-.02em;color:var(--on-d-2);transition:color .3s}
+.sol-index a{display:flex;align-items:center;gap:14px;padding:20px 0 0;font-size:clamp(1.25rem,1rem + .9vw,1.75rem);font-weight:600;letter-spacing:-.02em;color:var(--on-d-2);transition:color .3s}
 .sol-index a:hover{color:var(--white)}
-.sol-index .mono{color:var(--cyan);font-size:inherit;line-height:inherit;letter-spacing:0}
-.sol-key{display:inline-grid;place-items:center;width:22px;height:22px;margin-right:10px;border:1px solid currentColor;border-radius:50%;font-size:.625rem;letter-spacing:0}
+/* numbered circle, sized to the label next to it */
+.sol-num{flex:none;display:inline-grid;place-items:center;width:2.2em;height:2.2em;border:1.5px solid var(--cyan);border-radius:50%;color:var(--cyan);font:700 .52em/1 var(--mono);letter-spacing:0}
+.sol-key{display:inline-grid;place-items:center;width:22px;height:22px;margin-right:10px;border:1px solid currentColor;border-radius:50%;font-size:.625rem;line-height:1;letter-spacing:0}
 .sol{position:relative}
 
 /* A · Forecast — cool slate, portrait image, typographic translation */
