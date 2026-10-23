@@ -94,7 +94,7 @@ ul,ol{list-style:none}
 .btn-light{background:var(--white);color:#000}
 .btn-light:hover{background:#E8EDF1}
 /* secondary glass: tweak live with ?tune in the URL */
-:root{--ghost-blur:16px;--ghost-sat:1.3;--ghost-fill:.08;--ghost-border:.2}
+:root{--ghost-blur:5px;--ghost-sat:1.4;--ghost-fill:.03;--ghost-border:.17}
 .btn-ghost-d{background:rgb(255 255 255 / var(--ghost-fill));border-color:rgb(255 255 255 / var(--ghost-border));color:var(--white);-webkit-backdrop-filter:blur(var(--ghost-blur)) saturate(var(--ghost-sat));backdrop-filter:blur(var(--ghost-blur)) saturate(var(--ghost-sat))}
 .btn-ghost-d:hover{background:rgb(255 255 255 / calc(var(--ghost-fill) + .08));border-color:rgb(255 255 255 / calc(var(--ghost-border) + .12))}
 
