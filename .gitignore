@@ -1,0 +1,8 @@
+# macOS
+.DS_Store
+
+# Exported archives (the site files themselves are tracked)
+*.zip
+
+# Vercel CLI link folder
+.vercel

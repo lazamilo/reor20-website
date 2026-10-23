@@ -1,0 +1,554 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>REOR20 | DeepWater — Physics-Trained AI Flood Engine</title>
+<meta name="description" content="DeepWater by REOR20: the first physics-trained AI flood simulation engine. Real-time, high-resolution flood intelligence for forecasting, risk analysis and post-event insight — anywhere on Earth.">
+<link rel="canonical" href="https://www.reor20.com/">
+<meta name="theme-color" content="#04080F">
+<meta property="og:type" content="website">
+<meta property="og:title" content="REOR20 | Physics trained AI flood engine">
+<meta property="og:description" content="AI flood simulation engine delivering real-time, high-resolution flood intelligence for forecasting, risk analysis, and post-event insights worldwide">
+<meta property="og:image" content="https://storage.googleapis.com/gpt-engineer-file-uploads/GPesFIXaCYVj1DIH6RFoXiAqYq22/social-images/social-1776160466366-REOR20_Logotype_-_black_colour_larger_background.webp">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="REOR20 | Physics trained AI flood engine">
+<meta name="twitter:description" content="AI flood simulation engine delivering real-time, high-resolution flood intelligence for forecasting, risk analysis, and post-event insights worldwide">
+<meta name="twitter:image" content="https://storage.googleapis.com/gpt-engineer-file-uploads/GPesFIXaCYVj1DIH6RFoXiAqYq22/social-images/social-1776160466366-REOR20_Logotype_-_black_colour_larger_background.webp">
+
+<link rel="preload" href="fonts/MaisonNeue-Demi.otf" as="font" type="font/otf" crossorigin>
+<link rel="preload" href="fonts/MaisonNeue-Book.otf" as="font" type="font/otf" crossorigin>
+<link rel="preload" as="image" href="img/gen/hero-terrain-2560.jpg" imagesrcset="img/gen/hero-terrain-1400.jpg 1400w, img/gen/hero-terrain-2560.jpg 2560w" imagesizes="100vw" fetchpriority="high">
+<link rel="stylesheet" href="css/site.css">
+
+<!-- Analytics: same Plausible property as the live site -->
+<script async src="https://plausible.io/js/pa-65PSNwKMUwoGAul6ONAOX.js"></script>
+<script>window.plausible=window.plausible||function(){(plausible.q=plausible.q||[]).push(arguments)},plausible.init=plausible.init||function(i){plausible.o=i||{}};plausible.init()</script>
+<script>document.documentElement.classList.add('js');if(matchMedia('(prefers-reduced-motion: reduce)').matches)document.documentElement.classList.add('reduced');</script>
+</head>
+<body>
+
+<svg width="0" height="0" style="position:absolute" aria-hidden="true" focusable="false">
+  <defs>
+    <symbol id="reor20" viewBox="0 0 583 113">
+      <g fill="currentColor"><path d="M119.846,111.25L218.329,111.25L218.329,90.918L140.178,90.918L140.178,66.66L218.329,66.66L218.329,46.328L140.178,46.328L140.178,22.082L218.329,22.082L218.329,1.75L119.846,1.75Z"/><path d="M287.33,0.379C256.388,0.379 231.214,25.552 231.214,56.495C231.214,87.438 256.388,112.611 287.33,112.611C318.273,112.611 343.447,87.438 343.447,56.495C343.447,25.552 318.273,0.379 287.33,0.379ZM287.33,93.55C266.897,93.55 250.275,76.929 250.275,56.495C250.275,36.062 266.897,19.44 287.33,19.44C307.764,19.44 324.385,36.062 324.385,56.495C324.385,76.929 307.764,93.55 287.33,93.55Z"/><path d="M106.249,25.475C103.53,11.281 91.9913,1.75 77.5429,1.75L0.179688,1.75L0.179688,22.082L77.5429,22.082C84.3668,22.082 85.9552,27.61 86.2856,29.3C86.6033,30.99 87.1752,36.721 80.8341,39.237L18.6183,63.966C7.42296,68.414 0.192395,79.075 0.192395,91.122L0.192395,111.225L20.5117,111.225L20.5117,91.122C20.5117,87.449 22.7101,84.209 26.1284,82.862L61.0231,68.985L82.2065,111.225L104.953,111.225L79.9954,61.437L88.357,58.12C101.789,52.783 108.981,39.656 106.262,25.462Z"/><path d="M461.766,25.475C459.046,11.281 447.508,1.75 433.059,1.75L355.696,1.75L355.696,22.082L433.059,22.082C439.883,22.082 441.472,27.61 441.802,29.3C442.12,30.99 442.692,36.721 436.351,39.237L374.135,63.966C362.94,68.414 355.709,79.075 355.709,91.122L355.709,111.225L376.041,111.225L376.041,91.122C376.041,87.449 378.239,84.209 381.658,82.862L416.552,68.985L437.736,111.225L460.482,111.225L435.525,61.437L443.886,58.12C457.318,52.783 464.51,39.656 461.791,25.462Z"/></g>
+      <g fill="#FF8A00"><path d="M489.837,32.211L507.12,32.211C515.519,32.211 522.356,25.374 522.356,16.975C522.356,8.575 515.519,1.738 507.12,1.738L475.757,1.738L475.757,10.43L507.12,10.43C510.728,10.43 513.664,13.366 513.664,16.975C513.664,20.584 510.728,23.519 507.12,23.519L489.837,23.519C481.438,23.519 474.601,30.356 474.601,38.755C474.601,47.155 481.438,53.992 489.837,53.992L521.238,53.992L521.238,45.3L489.837,45.3C486.228,45.3 483.293,42.364 483.293,38.755C483.293,35.146 486.228,32.211 489.837,32.211Z"/><path d="M556.094,1.75C541.697,1.75 529.98,13.466 529.98,27.864C529.98,42.262 541.697,53.978 556.094,53.978C570.492,53.978 582.208,42.262 582.208,27.864C582.208,13.466 570.492,1.75 556.094,1.75ZM556.094,45.299C546.487,45.299 538.672,37.484 538.672,27.877C538.672,18.27 546.487,10.455 556.094,10.455C565.701,10.455 573.516,18.27 573.516,27.877C573.516,37.484 565.701,45.299 556.094,45.299Z"/></g>
+    </symbol>
+    <symbol id="arrow" viewBox="0 0 16 16"><path d="M2 8h11M9 4l4 4-4 4" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></symbol>
+    <symbol id="ext" viewBox="0 0 16 16"><path d="M5 11l6-6M6 5h5v5" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></symbol>
+  </defs>
+</svg>
+
+<a class="skip" href="#main">Skip to content</a>
+
+<!-- ================= NAV ================= -->
+<header class="nav" id="nav">
+  <div class="nav-inner">
+    <a class="nav-logo" href="#top" aria-label="REOR20 — home"><svg viewBox="0 0 583 113" aria-hidden="true"><use href="#reor20"/></svg></a>
+    <nav class="nav-links" aria-label="Primary">
+      <a href="#breakthrough">Technology</a>
+      <a href="#action">DeepWater</a>
+      <a href="#solutions">Solutions</a>
+      <a href="#partner">Partners</a>
+      <a href="#data">Flood data</a>
+    </nav>
+    <a class="btn btn-sm btn-light nav-cta" href="mailto:info@reor20.com?subject=Inquiry%20%E2%80%93%20DeepWater%20Flood%20Solutions">Talk to us</a>
+    <button class="nav-toggle" id="navToggle" type="button" aria-expanded="false" aria-controls="navSheet"><span class="sr">Menu</span><i></i></button>
+  </div>
+  <div class="nav-sheet" id="navSheet" hidden>
+    <a href="#breakthrough">Technology</a>
+    <a href="#action">DeepWater in action</a>
+    <a href="#solutions">Solutions</a>
+    <a href="#decisions">Data to decisions</a>
+    <a href="#partner">Partner with us</a>
+    <a href="#data">On-demand flood data</a>
+    <a class="btn btn-light" href="mailto:info@reor20.com?subject=Inquiry%20%E2%80%93%20DeepWater%20Flood%20Solutions">Talk to us</a>
+  </div>
+</header>
+
+<main id="main">
+
+<!-- ================= 01 HERO ================= -->
+<section class="hero" id="top" aria-labelledby="heroTitle">
+  <div class="hero-stage">
+    <div class="hero-media" id="heroMedia">
+      <img class="hl hl-terrain" src="img/gen/hero-terrain-2560.jpg" srcset="img/gen/hero-terrain-1400.jpg 1400w, img/gen/hero-terrain-2560.jpg 2560w" sizes="100vw" alt="Aerial view of a river valley with a small town, fields and forested hills" fetchpriority="high" decoding="async">
+      <img class="hl hl-flood" src="img/gen/hero-flood-2560.jpg" srcset="img/gen/hero-flood-1400.jpg 1400w, img/gen/hero-flood-2560.jpg 2560w" sizes="100vw" alt="" decoding="async">
+      <img class="hl hl-depth" src="img/gen/hero-depth-2560.jpg" srcset="img/gen/hero-depth-1400.jpg 1400w, img/gen/hero-depth-2560.jpg 2560w" sizes="100vw" alt="" decoding="async">
+      <span class="hero-scan" aria-hidden="true"></span>
+    </div>
+    <div class="hero-scrim" aria-hidden="true"></div>
+
+    <div class="hero-copy wrap" id="heroCopy">
+      <p class="eyebrow eyebrow-d">DeepWater <span class="by">by REOR20</span></p>
+      <h1 id="heroTitle" class="display">What if you could understand any flood on&nbsp;Earth in&nbsp;seconds?</h1>
+      <p class="hero-lead">DeepWater is the first physics-trained AI flood simulation engine. It turns rainfall, terrain and weather data into high-resolution flood intelligence. <strong>Any flood. Any scale. Anywhere.</strong></p>
+      <div class="hero-ctas">
+        <a class="btn btn-light" href="#action">See DeepWater in action <svg aria-hidden="true"><use href="#arrow"/></svg></a>
+        <a class="btn btn-ghost-d" href="#solutions">Explore solutions</a>
+      </div>
+    </div>
+
+    <div class="hero-hud wrap" aria-hidden="true">
+      <ol class="stages" id="heroStages">
+        <li class="on"><span>01</span>Terrain</li>
+        <li><span>02</span>Flood event</li>
+        <li><span>03</span>Simulated depth</li>
+      </ol>
+      <div class="hero-captions">
+        <p class="cap on">A river valley, read as elevation.</p>
+        <p class="cap">A storm stalls over the catchment. Where does the water go?</p>
+        <p class="cap">Depth resolved across the whole floodplain.</p>
+      </div>
+      <div class="legend" id="heroLegend"><span class="mono">Water depth</span><i class="ramp"></i><span class="mono">shallow</span><span class="mono">deep</span></div>
+      <p class="tag-illus">Illustrative visualization — not DeepWater output</p>
+    </div>
+  </div>
+</section>
+
+<!-- ================= 02 BREAKTHROUGH ================= -->
+<section class="sec light breakthrough" id="breakthrough" aria-labelledby="btTitle">
+  <div class="wrap">
+    <div class="bt-head">
+      <p class="eyebrow" data-reveal>01 — The breakthrough</p>
+      <h2 id="btTitle" class="h2" data-reveal>Flood physics, at the speed of&nbsp;a&nbsp;decision.</h2>
+      <div class="bt-copy" data-reveal>
+        <p class="lead">Conventional hydrodynamic models solve the equations of moving water cell by cell, timestep by timestep. They are trusted — and computationally expensive, so most organisations can only afford a handful of scenarios.</p>
+        <p class="lead">DeepWater is trained on physics. It has learned how water moves across terrain, so the full dynamics of a flood — depth, velocity, extent and timing — arrive in seconds.</p>
+      </div>
+    </div>
+
+    <div class="compare" data-reveal>
+      <figure class="cmp-panel">
+        <div class="cmp-screen"><canvas id="cmpSolver" aria-hidden="true"></canvas></div>
+        <figcaption>
+          <span class="mono">Conventional solver</span>
+          <span class="cmp-status mono" id="cmpSolverStatus">Timestep 0000</span>
+          <p>Discretise the terrain into a mesh, then advance every cell through every timestep.</p>
+        </figcaption>
+      </figure>
+      <figure class="cmp-panel is-dw">
+        <div class="cmp-screen"><canvas id="cmpDeep" aria-hidden="true"></canvas></div>
+        <figcaption>
+          <span class="mono">DeepWater</span>
+          <span class="cmp-status mono" id="cmpDeepStatus">Ready</span>
+          <p>A physics-trained network infers the full dynamic evolution of the flood in one pass.</p>
+        </figcaption>
+      </figure>
+      <p class="tag-illus tag-l">Illustrative comparison — not to scale</p>
+    </div>
+
+    <dl class="specs" data-reveal>
+      <div><dt><span class="num">45</span><span class="unit">s</span></dt><dd>Hours of rainfall simulated, on a single GPU (A100)<sup>*</sup></dd></div>
+      <div><dt><span class="num">10</span><span class="unit">m</span></dt><dd>Resolution of simulated depth and flow dynamics<sup>*</sup></dd></div>
+      <div><dt><span class="unit pre">~</span><span class="num">4,500</span><span class="unit">km²</span></dt><dd>Example catchment area in a single simulation<sup>*</sup></dd></div>
+    </dl>
+    <p class="footnote" data-reveal><sup>*</sup> Figures shown in the DeepWater product demo for an example scenario: 100&nbsp;mm cumulative rainfall over 8&nbsp;hours. Calculations always run at catchment level.</p>
+  </div>
+</section>
+
+<!-- ================= 03 IN ACTION ================= -->
+<section class="sec dark action" id="action" aria-labelledby="actTitle">
+  <div class="wrap act-head">
+    <p class="eyebrow eyebrow-d" data-reveal>02 — See DeepWater in action</p>
+    <h2 id="actTitle" class="h2" data-reveal>From a raindrop to a&nbsp;decision.</h2>
+    <p class="lead lead-d" data-reveal>Five steps turn weather into intelligence. Scroll through them, then watch the real engine at work.</p>
+  </div>
+
+  <div class="wrap act-grid" id="actGrid">
+    <div class="act-visual">
+      <div class="act-screen">
+        <canvas id="actCanvas" aria-hidden="true"></canvas>
+        <div class="act-hud" aria-hidden="true">
+          <span class="mono" id="actHudStep">01 / Rainfall input</span>
+          <span class="mono" id="actHudT">T+00:00</span>
+        </div>
+        <div class="legend legend-act" id="actLegend" aria-hidden="true"><span class="mono">Depth</span><i class="ramp"></i><span class="mono">0 m</span><span class="mono">3 m+</span></div>
+      </div>
+      <p class="tag-illus">Illustrative model — not DeepWater output</p>
+    </div>
+    <ol class="act-steps" id="actSteps">
+      <li class="act-step">
+        <span class="mono step-n">01</span>
+        <h3>Rainfall input</h3>
+        <p>Start from a forecast, a scenario or an observed storm — for example, 100&nbsp;mm of cumulative rain over 8&nbsp;hours.</p>
+      </li>
+      <li class="act-step">
+        <span class="mono step-n">02</span>
+        <h3>Terrain analysis</h3>
+        <p>Elevation, channels and barriers define where water can go. Every calculation runs across the whole catchment, not a single tile.</p>
+      </li>
+      <li class="act-step">
+        <span class="mono step-n">03</span>
+        <h3>Water propagation</h3>
+        <p>Water accumulates, spills over banks and travels downstream — the full dynamic evolution, not a single snapshot.</p>
+      </li>
+      <li class="act-step">
+        <span class="mono step-n">04</span>
+        <h3>Depth and velocity</h3>
+        <p>Every pixel resolves to a depth, a velocity and a flow direction, at every timestep of the event.</p>
+      </li>
+      <li class="act-step">
+        <span class="mono step-n">05</span>
+        <h3>Actionable intelligence</h3>
+        <p>Buildings, roads and zones can be checked against the thresholds that matter to your teams.</p>
+      </li>
+    </ol>
+  </div>
+
+  <div class="wrap film" id="film">
+    <div class="film-head">
+      <h3 class="h3" data-reveal>The engine, unedited.</h3>
+      <p class="lead-d" data-reveal>Real product footage: DeepWater simulating a flood from rainfall input to impact analysis.</p>
+    </div>
+    <div class="film-frame" data-reveal>
+      <video id="filmVideo" playsinline preload="none" poster="img/real/demo-64.jpg">
+        <source src="https://quqczmhlhhrnhevlwlug.supabase.co/storage/v1/object/public/media/deepwater-demo-v2.mp4" type="video/mp4">
+        <source src="media/deepwater-demo.mp4" type="video/mp4">
+      </video>
+      <button class="film-play" id="filmPlay" type="button"><span class="play-ring" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M8 5.5v13l11-6.5z" fill="currentColor"/></svg></span><span>Play the demo <span class="mono">1:38</span></span></button>
+      <span class="film-badge mono">Product demo · real interface</span>
+    </div>
+    <ol class="chapters" id="chapters" aria-label="Demo chapters">
+      <li><button type="button" data-t="13"><img src="img/real/demo-14.jpg" alt="" loading="lazy"><span class="mono">0:13</span><b>Start anywhere on Earth</b></button></li>
+      <li><button type="button" data-t="28"><img src="img/real/demo-30.jpg" alt="" loading="lazy"><span class="mono">0:28</span><b>Areas of any size</b></button></li>
+      <li><button type="button" data-t="53"><img src="img/real/demo-56.jpg" alt="" loading="lazy"><span class="mono">0:53</span><b>Hours of rain in 45 s</b></button></li>
+      <li><button type="button" data-t="62"><img src="img/real/demo-64.jpg" alt="" loading="lazy"><span class="mono">1:02</span><b>See where water goes</b></button></li>
+      <li><button type="button" data-t="73"><img src="img/real/demo-76.jpg" alt="" loading="lazy"><span class="mono">1:13</span><b>The evolution of a flood</b></button></li>
+      <li><button type="button" data-t="82"><img src="img/real/demo-84.jpg" alt="" loading="lazy"><span class="mono">1:22</span><b>Build flood products</b></button></li>
+    </ol>
+  </div>
+</section>
+
+<!-- ================= 04 SOLUTIONS ================= -->
+<section class="solutions" id="solutions" aria-labelledby="solTitle">
+  <div class="sol-intro sec dark">
+    <div class="wrap">
+      <p class="eyebrow eyebrow-d" data-reveal>03 — One engine, multiple applications</p>
+      <h2 id="solTitle" class="h2" data-reveal>Before. During. After.<br><span class="dim">One engine sees the whole&nbsp;flood.</span></h2>
+      <p class="lead lead-d" data-reveal>From real-time forecasting to catastrophe risk modelling and post-event forensics — the same physics powers every answer, for insurers, governments, asset owners and beyond.</p>
+      <nav class="sol-index" aria-label="Solutions" data-reveal>
+        <a href="#forecasting"><span class="mono">A</span>Forecasting</a>
+        <a href="#risk"><span class="mono">B</span>Risk assessment</a>
+        <a href="#postevent"><span class="mono">C</span>Post-event analysis</a>
+      </nav>
+    </div>
+  </div>
+
+  <!-- A · Forecasting -->
+  <article class="sol sol-forecast" id="forecasting" aria-labelledby="fcTitle">
+    <div class="wrap fc-grid">
+      <figure class="fc-media" data-reveal>
+        <img src="img/gen/storm-1800.jpg" srcset="img/gen/storm-1000.jpg 1000w, img/gen/storm-1800.jpg 1800w" sizes="(max-width: 900px) 100vw, 46vw" alt="A storm cell with visible rain shafts approaching a river valley and village" loading="lazy" decoding="async">
+        <figcaption class="tag-illus">Illustrative image</figcaption>
+      </figure>
+      <div class="fc-copy">
+        <p class="eyebrow eyebrow-d" data-reveal><span class="sol-key">A</span> Forecasting solutions</p>
+        <h3 id="fcTitle" class="h2 h2-s" data-reveal>Act before the water&nbsp;arrives.</h3>
+        <p class="lead-d" data-reveal>DeepWater translates any rainfall forecast into precise, asset-level flood impact. Rainfall to flood impact in seconds — real-time, actionable, anywhere on Earth.</p>
+
+        <div class="translate" data-reveal>
+          <p class="mono tr-label">From</p>
+          <p class="tr-from">“200&nbsp;mm of rainfall is expected over this city.”</p>
+          <p class="mono tr-label">To</p>
+          <ul class="tr-to" id="trTo">
+            <li class="on">“Evacuate zone B — water depth will exceed 60&nbsp;cm by 14:00.”</li>
+            <li>“High-risk buildings are located at X, Y.”</li>
+            <li>“Reroute logistics away from the A3 corridor until tomorrow.”</li>
+            <li>“Do not park your car at those locations for the next 18&nbsp;h.”</li>
+          </ul>
+        </div>
+
+        <ul class="ticks ticks-d" data-reveal>
+          <li>Maximum depth per pixel</li>
+          <li>Full dynamic evolution</li>
+          <li>Flow direction and origin</li>
+          <li>Velocity and duration</li>
+        </ul>
+        <a class="link-arrow link-d" data-reveal href="mailto:info@reor20.com?subject=Inquiry%20%E2%80%93%20Rainfall-to-Impact%20Forecasting">Discuss forecasting <svg aria-hidden="true"><use href="#arrow"/></svg></a>
+      </div>
+    </div>
+  </article>
+
+  <!-- B · Risk -->
+  <article class="sol sol-risk light" id="risk" aria-labelledby="rkTitle">
+    <div class="wrap">
+      <div class="rk-head">
+        <div>
+          <p class="eyebrow" data-reveal><span class="sol-key">B</span> Risk solutions</p>
+          <h3 id="rkTitle" class="h2 h2-s" data-reveal>Know what every street is exposed&nbsp;to.</h3>
+        </div>
+        <div data-reveal>
+          <p class="lead">Have a portfolio or a single asset exposed to flood? Simulate flood risk at scale — stress-test portfolios with thousands of scenarios at a fraction of the cost.</p>
+        </div>
+      </div>
+
+      <div class="reveal-cmp" id="riskCmp" data-reveal style="--pos:62%">
+        <img src="img/gen/urban-1800.jpg" srcset="img/gen/urban-1000.jpg 1000w, img/gen/urban-1800.jpg 1800w" sizes="(max-width: 1400px) 100vw, 1320px" alt="Aerial view of town blocks with floodwater in the streets" loading="lazy" decoding="async">
+        <div class="rc-top"><img src="img/gen/urban-depth-1800.jpg" srcset="img/gen/urban-depth-1000.jpg 1000w, img/gen/urban-depth-1800.jpg 1800w" sizes="(max-width: 1400px) 100vw, 1320px" alt="The same blocks with water depth shown as a colour map" loading="lazy" decoding="async"></div>
+        <span class="rc-handle" aria-hidden="true"><i></i></span>
+        <span class="rc-label rc-l mono" aria-hidden="true">Aerial view</span>
+        <span class="rc-label rc-r mono" aria-hidden="true">Depth layer</span>
+        <label class="sr" for="riskRange">Compare aerial view and depth layer</label>
+        <input id="riskRange" class="rc-range" type="range" min="0" max="100" value="62">
+        <span class="tag-illus rc-tag">Illustrative · drag to compare</span>
+      </div>
+
+      <ul class="ticks rk-ticks" data-reveal>
+        <li>Stress-test your portfolio</li>
+        <li>Quantify uncertainty</li>
+        <li>Evaluate climate scenarios</li>
+        <li>Compare asset risk</li>
+      </ul>
+      <a class="link-arrow" data-reveal href="mailto:info@reor20.com?subject=Inquiry%20%E2%80%93%20Flood%20Risk%20Assessment">Discuss a risk assessment <svg aria-hidden="true"><use href="#arrow"/></svg></a>
+    </div>
+  </article>
+
+  <!-- C · Post-event -->
+  <article class="sol sol-post" id="postevent" aria-labelledby="peTitle">
+    <div class="pe-grid">
+      <figure class="pe-media" id="peMedia">
+        <img src="img/gen/postevent-1800.jpg" srcset="img/gen/postevent-1000.jpg 1000w, img/gen/postevent-1800.jpg 1800w" sizes="(max-width: 900px) 100vw, 60vw" alt="Aerial view of a riverside town and fields after a flood has receded, with silt across the floodplain" loading="lazy" decoding="async">
+        <svg class="pe-overlay" viewBox="0 0 1000 746" preserveAspectRatio="xMidYMid slice" aria-hidden="true">
+          <path class="pe-extent" pathLength="1" d="M332 40 C420 18 520 2 610 0 L840 8 C852 70 858 130 862 190 C868 270 872 340 884 400 C910 430 945 455 968 480 C985 520 992 560 984 640 C940 640 900 630 868 618 C830 580 800 548 778 520 C748 488 724 462 698 450 C650 432 610 424 586 414 C540 380 506 350 478 328 C440 300 404 270 378 240 C352 210 330 188 318 168 C318 120 322 76 332 40 Z"/>
+          <g class="pe-pin" style="--d:0"><circle cx="560" cy="140" r="7"/><circle class="ring" cx="560" cy="140" r="16"/></g>
+          <g class="pe-pin" style="--d:1"><circle cx="760" cy="300" r="7"/><circle class="ring" cx="760" cy="300" r="16"/></g>
+          <g class="pe-pin" style="--d:2"><circle cx="300" cy="470" r="7"/><circle class="ring" cx="300" cy="470" r="16"/></g>
+        </svg>
+        <ol class="pe-notes" aria-hidden="true">
+          <li><span class="mono">A</span>Where water reached, and how deep</li>
+          <li><span class="mono">B</span>How the flood propagated</li>
+          <li><span class="mono">C</span>Which assets were impacted</li>
+        </ol>
+        <figcaption class="tag-illus pe-tag">Illustrative visualization — not DeepWater output</figcaption>
+      </figure>
+      <div class="pe-copy">
+        <p class="eyebrow eyebrow-d" data-reveal><span class="sol-key">C</span> Post-event solutions</p>
+        <h3 id="peTitle" class="h2 h2-s" data-reveal>Instant clarity after every&nbsp;flood.</h3>
+        <p class="lead-d" data-reveal>A flood just happened? Reconstruct the full event dynamics with forensic precision — hours, not weeks.</p>
+        <div class="pe-lists" data-reveal>
+          <div>
+            <p class="mono">Understand instantly</p>
+            <ul class="ticks ticks-d"><li>Where water reached and how deep</li><li>How the flood propagated</li><li>Which assets were impacted</li></ul>
+          </div>
+          <div>
+            <p class="mono">Turn it into action</p>
+            <ul class="ticks ticks-d"><li>Accelerate claims settlement</li><li>Prioritise emergency response</li><li>Assess infrastructure damage</li></ul>
+          </div>
+        </div>
+        <a class="link-arrow link-d" data-reveal href="mailto:info@reor20.com?subject=Inquiry%20%E2%80%93%20Post-Event%20Flood%20Analysis">Discuss post-event analysis <svg aria-hidden="true"><use href="#arrow"/></svg></a>
+      </div>
+    </div>
+  </article>
+</section>
+
+<!-- ================= 05 DATA TO DECISIONS ================= -->
+<section class="sec light decisions" id="decisions" aria-labelledby="dcTitle">
+  <div class="wrap">
+    <div class="dc-head">
+      <p class="eyebrow" data-reveal>04 — From data to decisions</p>
+      <h2 id="dcTitle" class="h2" data-reveal>Is flood a risk, or a problem, for your&nbsp;business?</h2>
+      <p class="lead" data-reveal>DeepWater supplies the flood intelligence. Your teams make the call — with depth, velocity and timing in front of them.</p>
+    </div>
+    <div class="dc-table" role="table" aria-label="How flood intelligence informs decisions">
+      <div class="dc-row dc-th" role="row">
+        <span role="columnheader" class="mono">Who</span>
+        <span role="columnheader" class="mono">The question</span>
+        <span role="columnheader" class="mono">What DeepWater provides</span>
+        <span role="columnheader" class="mono">The decision it informs</span>
+      </div>
+      <div class="dc-row" role="row" data-reveal>
+        <span role="cell" class="dc-who">Insurers</span>
+        <span role="cell">Which insured assets were hit, and how badly?</span>
+        <span role="cell">Reconstructed depth and extent, asset by asset</span>
+        <span role="cell" class="dc-out">Faster claims settlement, automated claims and parametric products</span>
+      </div>
+      <div class="dc-row" role="row" data-reveal>
+        <span role="cell" class="dc-who">Governments &amp; civil protection</span>
+        <span role="cell">Where will water exceed safe depths — and when?</span>
+        <span role="cell">Forecast depth, arrival time and duration per zone</span>
+        <span role="cell" class="dc-out">“Evacuate zone B — water depth will exceed 60&nbsp;cm by 14:00.”</span>
+      </div>
+      <div class="dc-row" role="row" data-reveal>
+        <span role="cell" class="dc-who">Banks &amp; asset owners</span>
+        <span role="cell">How exposed is a portfolio under future scenarios?</span>
+        <span role="cell">Thousands of scenarios, compared at asset level</span>
+        <span role="cell" class="dc-out">Mortgage stress-testing and climate scenario planning</span>
+      </div>
+      <div class="dc-row" role="row" data-reveal>
+        <span role="cell" class="dc-who">Infrastructure, fleets &amp; logistics</span>
+        <span role="cell">Which roads and sites stay usable through the event?</span>
+        <span role="cell">Flood evolution along networks, hour by hour</span>
+        <span role="cell" class="dc-out">“Reroute logistics away from the A3 corridor until tomorrow.”</span>
+      </div>
+    </div>
+    <a class="link-arrow" data-reveal href="mailto:info@reor20.com?subject=Inquiry%20%E2%80%93%20DeepWater%20Flood%20Solutions">Ask for a solution <svg aria-hidden="true"><use href="#arrow"/></svg></a>
+  </div>
+</section>
+
+<!-- ================= 06 BUILD WITH REOR20 ================= -->
+<section class="sec dark partner" id="partner" aria-labelledby="ptTitle">
+  <div class="wrap">
+    <div class="pt-head">
+      <p class="eyebrow eyebrow-d" data-reveal>05 — Build with REOR20</p>
+      <h2 id="ptTitle" class="h2" data-reveal>Your expertise. Your data. Your&nbsp;market. <span class="dim">Our engine.</span></h2>
+      <p class="lead lead-d" data-reveal>Plug into DeepWater and deliver flood products that were never possible before — without building the technology yourself. DeepWater removes the hazard-solver complexity, not your proprietary data or expertise.</p>
+    </div>
+
+    <div class="api" data-reveal aria-label="Your data in, flood impact out">
+      <div class="api-col">
+        <p class="mono api-k">Your data in · you keep</p>
+        <ul class="api-list"><li>DEMs</li><li>Weather data</li><li>Boundary conditions</li><li>Scenario libraries</li><li>Regional expertise</li></ul>
+      </div>
+      <div class="api-flow" aria-hidden="true"><i></i><i></i><i></i></div>
+      <div class="api-core">
+        <svg viewBox="0 0 583 113" class="api-logo" aria-hidden="true"><use href="#reor20"/></svg>
+        <p class="api-name">DeepWater API</p>
+        <p class="mono">Physics-trained hazard engine</p>
+      </div>
+      <div class="api-flow" aria-hidden="true"><i></i><i></i><i></i></div>
+      <div class="api-col">
+        <p class="mono api-k">Flood impact out</p>
+        <ul class="api-list api-out"><li>Water depth</li><li>Flow velocity</li><li>Flood extent</li><li>Timing</li><li>All timesteps</li></ul>
+      </div>
+    </div>
+    <ol class="api-steps" data-reveal>
+      <li><span class="mono">1</span>Call the API.</li>
+      <li><span class="mono">2</span>Receive dynamic flood intelligence.</li>
+      <li><span class="mono">3</span>Multiply the value of your IP.</li>
+    </ol>
+
+    <div class="pt-grid">
+      <div class="pt-card" data-reveal>
+        <h3 class="h4">Your IP, amplified</h3>
+        <p>DeepWater removes hazard-solver complexity — not your proprietary data or expertise. We multiply the value of what you already have.</p>
+      </div>
+      <div class="pt-card" data-reveal>
+        <h3 class="h4">Any market, any scale</h3>
+        <p>Risk, forecasting, nowcasting, post-event — tailored for governments, insurers, banks and asset owners. Anywhere in the world.</p>
+      </div>
+      <div class="pt-card" data-reveal>
+        <h3 class="h4">You know your market best</h3>
+        <p>Government disaster response. Parametric insurance. Automated claims. Mortgage stress-testing. You know what your clients need — we give you the engine to deliver it.</p>
+      </div>
+    </div>
+
+    <div class="eco" data-reveal>
+      <div>
+        <p class="mono">We partner with companies in</p>
+        <ul class="eco-list"><li>Weather &amp; impact forecasting</li><li>Cat modelling &amp; climate risk</li><li>Geospatial data</li><li>Claims &amp; loss intelligence</li><li>Infrastructure &amp; digital twins</li></ul>
+        <p class="eco-note">…and anyone dealing with floods, anywhere in the world.</p>
+      </div>
+      <div>
+        <p class="mono">For every use case</p>
+        <ul class="eco-list"><li>Risk assessment</li><li>Prevention</li><li>Forecasting</li><li>Nowcasting</li><li>Post-event analysis</li></ul>
+      </div>
+      <div class="eco-cta">
+        <p>Bring your IP, your data, your market reach. We bring DeepWater. Together, we deliver what neither could alone.</p>
+        <a class="btn btn-light" href="mailto:info@reor20.com?subject=Inquiry%20%E2%80%93%20DeepWater%20API%20Partnership">Ask for API access <svg aria-hidden="true"><use href="#arrow"/></svg></a>
+        <a class="link-arrow link-d" href="https://www.reor20.com/partner">Partner programme <svg aria-hidden="true"><use href="#ext"/></svg></a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= 06b ON-DEMAND DATA ================= -->
+<section class="data" id="data" aria-labelledby="dtTitle">
+  <div class="data-bg" aria-hidden="true"><img src="img/gen/basin-1800.jpg" srcset="img/gen/basin-1000.jpg 1000w, img/gen/basin-1800.jpg 1800w" sizes="100vw" alt="" loading="lazy" decoding="async"></div>
+  <div class="wrap data-inner">
+    <div class="data-copy">
+      <p class="eyebrow eyebrow-d" data-reveal>06 — On-demand flood intelligence</p>
+      <h2 id="dtTitle" class="h2" data-reveal>Any event. Reconstructed.</h2>
+      <p class="lead lead-d" data-reveal>Explore real flood events reconstructed with forensic precision. Dynamic simulation data — depth, velocity, timing — delivered on demand for any event, anywhere on Earth.</p>
+      <dl class="data-facts" data-reveal>
+        <div><dt>Any event, reconstructed</dt><dd>From recent catastrophes to historical floods — full physics-based reconstruction in hours.</dd></div>
+        <div><dt>Dynamic flood data</dt><dd>Water depth, flow velocity, flood extent and timing — all variables, all timesteps.</dd></div>
+        <div><dt>Instant access</dt><dd>No waiting for field surveys. Simulation-grade data as soon as an event unfolds.</dd></div>
+      </dl>
+    </div>
+    <a class="event-card" data-reveal href="https://www.reor20.com/event/italy-2026">
+      <span class="ev-top"><span class="mono">Recent event</span><span class="ev-risk mono">High risk</span></span>
+      <span class="ev-title">Calabria flood event</span>
+      <span class="ev-meta">Calabria, Southern Italy · January 19–21, 2026</span>
+      <span class="ev-desc">High-resolution flood depth analysis across Calabria after severe storms triggered hundreds of emergency interventions.</span>
+      <span class="ev-go">View the reconstruction <svg aria-hidden="true"><use href="#ext"/></svg></span>
+    </a>
+    <div class="data-ctas" data-reveal>
+      <a class="btn btn-light" href="https://www.reor20.com/showcase">Explore on-demand flood data <svg aria-hidden="true"><use href="#ext"/></svg></a>
+      <a class="btn btn-ghost-d" href="mailto:info@reor20.com?subject=Inquiry%20%E2%80%93%20Custom%20Flood%20Data%20Set">Ask for data</a>
+    </div>
+    <p class="tag-illus data-tag">Background: illustrative satellite-style image</p>
+  </div>
+</section>
+
+<!-- ================= 07 CREDIBILITY ================= -->
+<section class="sec light trust" id="trust" aria-labelledby="trTitle">
+  <div class="wrap">
+    <div class="tr-head">
+      <p class="eyebrow" data-reveal>07 — Credibility</p>
+      <h2 id="trTitle" class="h3" data-reveal>Built in Zurich. Recognised by the institutions that understand risk.</h2>
+    </div>
+    <ul class="logos" data-reveal>
+      <li><img class="lg-esa" src="partners/esa-bic-logo.png" width="505" height="85" alt="ESA BIC" loading="lazy"><span class="mono">Winner 2020</span></li>
+      <li><img class="lg-inno" src="partners/innosuisse-logo.png" width="554" height="360" alt="Innosuisse" loading="lazy"><span class="mono" aria-hidden="true">&nbsp;</span></li>
+      <li><img class="lg-pnp" src="partners/pnp-logo.png" width="600" height="113" alt="Plug and Play" loading="lazy"><span class="mono">Top 50 InsurTech</span></li>
+      <li><img class="lg-lab" src="partners/lloyds-lab-logo.png" width="600" height="213" alt="Lloyd's Lab" loading="lazy"><span class="mono">Cohort 10</span></li>
+      <li><img class="lg-lloyds" src="partners/lloyds-logo.png" width="600" height="137" alt="Lloyd's" loading="lazy"><span class="mono">Innovation Award 2023</span></li>
+    </ul>
+  </div>
+</section>
+
+<!-- ================= 08 FINAL CTA ================= -->
+<section class="final" id="contact" aria-labelledby="ctaTitle">
+  <div class="final-bg" aria-hidden="true"><img src="img/gen/hero-depth-1400.jpg" srcset="img/gen/hero-depth-1400.jpg 1400w, img/gen/hero-depth-2560.jpg 2560w" sizes="100vw" alt="" loading="lazy" decoding="async"></div>
+  <div class="wrap final-inner">
+    <h2 id="ctaTitle" class="display final-title" data-reveal>See the water.<br>Then decide.</h2>
+    <p class="lead lead-d" data-reveal>Tell us what you need to understand about flood — a city, a portfolio, an event, a product you want to build. We'll show you what DeepWater can do.</p>
+    <div class="hero-ctas" data-reveal>
+      <a class="btn btn-light" href="mailto:info@reor20.com?subject=Inquiry%20%E2%80%93%20DeepWater%20Flood%20Solutions">Talk to us <svg aria-hidden="true"><use href="#arrow"/></svg></a>
+      <a class="btn btn-ghost-d" href="mailto:info@reor20.com?subject=Inquiry%20%E2%80%93%20DeepWater%20API%20Partnership">Ask for API access</a>
+    </div>
+    <p class="final-mail" data-reveal><a href="mailto:info@reor20.com">info@reor20.com</a></p>
+  </div>
+</section>
+
+</main>
+
+<!-- ================= FOOTER ================= -->
+<footer class="footer">
+  <div class="wrap">
+    <div class="ft-grid">
+      <div class="ft-brand">
+        <a class="nav-logo" href="#top" aria-label="REOR20 — back to top"><svg viewBox="0 0 583 113" aria-hidden="true"><use href="#reor20"/></svg></a>
+        <p>DeepWater — the first physics-trained AI flood simulation engine. Any flood. Any scale. Anywhere.</p>
+      </div>
+      <nav aria-label="DeepWater">
+        <p class="mono">DeepWater</p>
+        <a href="#breakthrough">Technology</a>
+        <a href="#action">See it in action</a>
+        <a href="#solutions">Solutions</a>
+        <a href="#decisions">Data to decisions</a>
+      </nav>
+      <nav aria-label="Company">
+        <p class="mono">Explore</p>
+        <a href="https://www.reor20.com/solutions">Flood solutions</a>
+        <a href="https://www.reor20.com/partner">Partnerships</a>
+        <a href="https://www.reor20.com/showcase">On-demand flood data</a>
+      </nav>
+      <address>
+        <p class="mono">Contact</p>
+        <a href="mailto:info@reor20.com">info@reor20.com</a>
+        <a href="https://maps.google.com/?q=Sihlquai+125,+8005+Zurich,+Switzerland" rel="noopener">Sihlquai 125, 8005 Zurich, Switzerland</a>
+      </address>
+    </div>
+    <div class="ft-bottom">
+      <p>© 2026 REOR20. All rights reserved.</p>
+      <p class="ft-note">Visuals marked “illustrative” are artistic representations, not DeepWater output. Product footage and demo figures are from the DeepWater interface.</p>
+    </div>
+  </div>
+</footer>
+
+<script src="js/flood-model.js" defer></script>
+<script src="js/site.js" defer></script>
+</body>
+</html>
