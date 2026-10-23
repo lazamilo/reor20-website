@@ -60,8 +60,10 @@
     lDepth.style.clipPath = `inset(0 ${(100 - wipe * 100).toFixed(2)}% 0 0)`;
     scan.style.left = (wipe * 100).toFixed(2) + '%';
     scan.style.opacity = wipe > 0 && wipe < 1 ? 1 : 0;
-    media.style.transform = `scale(${(1.0 + p * .09).toFixed(4)})`;
-    const out = ramp(p, .04, .2);
+    // Stage 1 (p < .16) only fills line 1: no zoom, no fade. Everything else
+    // starts once line 1 is full, together with picture 2.
+    media.style.transform = `scale(${(1.0 + ramp(p, .16, 1) * .09).toFixed(4)})`;
+    const out = ramp(p, .16, .3);
     copy.style.opacity = (1 - out).toFixed(3);
     copy.style.transform = `translateY(${(-out * 48).toFixed(1)}px)`;
     copy.style.visibility = out >= 1 ? 'hidden' : 'visible';
