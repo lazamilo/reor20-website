@@ -8,7 +8,6 @@
 @font-face{font-family:"Maison Neue";src:url(../fonts/MaisonNeue-Demi.otf) format("opentype");font-weight:600;font-display:swap}
 @font-face{font-family:"Maison Neue";src:url(../fonts/MaisonNeue-Bold.otf) format("opentype");font-weight:700;font-display:swap}
 @font-face{font-family:"Maison Neue Extended";src:url(../fonts/MaisonNeueExtended-Bold.otf) format("opentype");font-weight:700;font-display:swap}
-@font-face{font-family:"Maison Neue Mono";src:url(../fonts/MaisonNeueMono-Regular.otf) format("opentype");font-weight:400;font-display:swap}
 
 :root{
   /* surfaces */
@@ -37,7 +36,9 @@
   --ramp:linear-gradient(90deg,var(--d0),var(--d1) 18%,var(--d2) 38%,var(--d3) 60%,var(--d4) 80%,var(--d5));
 
   --sans:"Maison Neue",-apple-system,BlinkMacSystemFont,"Helvetica Neue",Arial,sans-serif;
-  --mono:"Maison Neue Mono",ui-monospace,"SF Mono",Menlo,monospace;
+  /* label face: Maison Neue Extended Bold (wide), used for every small caps label */
+  --mono:"Maison Neue Extended","Maison Neue",-apple-system,BlinkMacSystemFont,"Helvetica Neue",Arial,sans-serif;
+  --code:ui-monospace,"SF Mono",Menlo,monospace;
 
   --max:1320px;
   --gutter:clamp(16px,5vw,72px);
@@ -78,12 +79,11 @@ ul,ol{list-style:none}
 .lead{font-size:clamp(1.125rem,1rem + .45vw,1.375rem);line-height:1.45;letter-spacing:-.008em;color:var(--ink-2);max-width:58ch;text-wrap:pretty}
 .lead-d,.dark .lead,.lead.lead-d{color:var(--on-d-2)}
 .lead-d{font-size:clamp(1.0625rem,1rem + .3vw,1.25rem);line-height:1.5;max-width:56ch;text-wrap:pretty}
-.mono{font-family:var(--mono);font-size:.75rem;line-height:1.4;letter-spacing:.08em;text-transform:uppercase}
-.eyebrow{font-family:var(--mono);font-size:.75rem;letter-spacing:.12em;text-transform:uppercase;color:var(--teal-ink);margin-bottom:22px}
+.mono{font-family:var(--mono);font-weight:700;font-size:.75rem;line-height:1.4;letter-spacing:.04em;text-transform:uppercase}
+.eyebrow{font-family:var(--mono);font-weight:700;font-size:.75rem;letter-spacing:.08em;text-transform:uppercase;color:var(--teal-ink);margin-bottom:22px}
 .eyebrow-d{color:var(--cyan)}
 .eyebrow .by{color:var(--on-d-2)}
-.hero-eyebrow{font-family:"Maison Neue Extended",var(--sans);font-weight:700;font-size:.75rem;letter-spacing:.14em;text-transform:uppercase}
-.tag-illus{font-family:var(--mono);font-size:.6875rem;letter-spacing:.06em;text-transform:uppercase;color:var(--on-d-3)}
+.tag-illus{font-family:var(--mono);font-weight:700;font-size:.625rem;letter-spacing:.04em;text-transform:uppercase;color:var(--on-d-3)}
 .light .tag-illus,.tag-l{color:#7C8792}
 
 /* ---------- Buttons & links ---------- */
@@ -111,7 +111,7 @@ ul,ol{list-style:none}
 .tune-foot{display:flex;gap:8px;margin-top:4px}
 .tune-foot button{flex:1;min-height:34px;border-radius:9px;border:1px solid var(--line-d2);font-size:.8125rem;font-weight:500}
 .tune-foot button:hover{background:rgba(255,255,255,.08)}
-.tune pre{margin:10px 0 0;padding:8px 10px;border-radius:8px;background:rgba(0,0,0,.35);font:400 .6875rem/1.5 var(--mono);color:var(--on-d-2);white-space:pre-wrap;user-select:all}
+.tune pre{margin:10px 0 0;padding:8px 10px;border-radius:8px;background:rgba(0,0,0,.35);font:400 .6875rem/1.5 var(--code);color:var(--on-d-2);white-space:pre-wrap;user-select:all}
 .btn-sm{min-height:40px;padding:0 16px;gap:12px;border-radius:11px;font-size:.9375rem}
 .link-arrow{display:inline-flex;align-items:center;gap:10px;font-weight:600;color:var(--teal-ink);border-bottom:1px solid currentColor;padding-bottom:3px}
 .link-arrow svg{width:15px;height:15px;transition:transform .35s var(--ease)}
@@ -168,7 +168,7 @@ ul,ol{list-style:none}
 .hero-ctas{display:flex;flex-wrap:wrap;gap:12px;margin-top:36px}
 .hero-hud{position:absolute;left:0;right:0;bottom:0;display:grid;grid-template-columns:auto 1fr auto;align-items:end;gap:20px 40px;padding-bottom:28px}
 .stages{display:flex;gap:4px}
-.stages li{position:relative;padding:10px 14px 0 0;min-width:118px;font-family:var(--mono);font-size:.6875rem;letter-spacing:.08em;text-transform:uppercase;color:var(--on-d-3);border-top:1px solid var(--line-d2);transition:color .5s var(--ease)}
+.stages li{position:relative;padding:10px 14px 0 0;min-width:118px;font-family:var(--mono);font-weight:700;font-size:.625rem;letter-spacing:.04em;text-transform:uppercase;color:var(--on-d-3);border-top:1px solid var(--line-d2);transition:color .5s var(--ease)}
 .stages li span{display:block;color:inherit;opacity:.7;margin-bottom:2px}
 .stages li::before{content:"";position:absolute;left:0;top:-1px;height:1px;width:0;background:var(--d1);transition:width .6s var(--ease)}
 .stages li.on{color:var(--on-d)}
@@ -389,7 +389,7 @@ ul,ol{list-style:none}
 .ev-top{display:flex;justify-content:space-between;color:var(--on-d-3)}
 .ev-risk{color:var(--alert)}
 .ev-title{font-weight:600;font-size:1.75rem;letter-spacing:-.022em;line-height:1.1}
-.ev-meta{font-family:var(--mono);font-size:.6875rem;letter-spacing:.06em;text-transform:uppercase;color:var(--on-d-2)}
+.ev-meta{font-family:var(--mono);font-weight:700;font-size:.625rem;letter-spacing:.04em;text-transform:uppercase;color:var(--on-d-2)}
 .ev-desc{color:var(--on-d-2);font-size:.9375rem}
 .ev-go{display:inline-flex;align-items:center;gap:8px;margin-top:6px;font-weight:600;color:var(--d1)}
 .ev-go svg{width:14px;height:14px}
@@ -422,7 +422,7 @@ ul,ol{list-style:none}
 .final-inner{position:relative}
 .final-title{max-width:10ch}
 .final .lead{margin-top:32px}
-.final-mail{margin-top:40px;font-family:var(--mono);font-size:.875rem;letter-spacing:.06em}
+.final-mail{margin-top:40px;font-family:var(--mono);font-weight:700;font-size:.8125rem;letter-spacing:.02em}
 .final-mail a{color:var(--on-d-2);border-bottom:1px solid var(--line-d2);padding-bottom:2px;transition:color .3s}
 .final-mail a:hover{color:var(--white)}
 
@@ -485,9 +485,9 @@ ul,ol{list-style:none}
   .pe-copy{max-width:none}
   .dc-th{display:none}
   .dc-row{grid-template-columns:1fr;gap:8px;padding:24px 0}
-  .dc-row > span:nth-child(2)::before{content:"Question · ";font-family:var(--mono);font-size:.6875rem;letter-spacing:.08em;text-transform:uppercase;color:#7C8792}
-  .dc-row > span:nth-child(3)::before{content:"DeepWater · ";font-family:var(--mono);font-size:.6875rem;letter-spacing:.08em;text-transform:uppercase;color:#7C8792}
-  .dc-row > span:nth-child(4)::before{content:"Decision · ";font-family:var(--mono);font-size:.6875rem;letter-spacing:.08em;text-transform:uppercase;color:var(--teal-ink);font-weight:400}
+  .dc-row > span:nth-child(2)::before{content:"Question · ";font-family:var(--mono);font-weight:700;font-size:.625rem;letter-spacing:.04em;text-transform:uppercase;color:#7C8792}
+  .dc-row > span:nth-child(3)::before{content:"DeepWater · ";font-family:var(--mono);font-weight:700;font-size:.625rem;letter-spacing:.04em;text-transform:uppercase;color:#7C8792}
+  .dc-row > span:nth-child(4)::before{content:"Decision · ";font-family:var(--mono);font-weight:700;font-size:.625rem;letter-spacing:.04em;text-transform:uppercase;color:var(--teal-ink);font-weight:400}
   .pt-grid{grid-template-columns:1fr}
   .pt-card,.pt-card + .pt-card{padding:26px 0;border-left:0;border-bottom:1px solid var(--line-d)}
   .api-steps{grid-template-columns:1fr}

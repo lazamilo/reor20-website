@@ -251,8 +251,8 @@
   };
   FloodView.prototype.drawAssets = function (st, m) {
     const ctx = this.ctx, T = this.T, dpr = this.dpr, a = st.assets;
-    const fs = Math.round(10.5 * dpr);
-    ctx.font = fs + 'px "Maison Neue Mono", ui-monospace, Menlo, monospace';
+    const fs = Math.round(9.5 * dpr);
+    ctx.font = '700 ' + fs + 'px "Maison Neue Extended", "Maison Neue", Arial, sans-serif';
     ctx.textBaseline = 'middle';
     this.assets.forEach((p, k) => {
       const dep = T.depth(p.x, p.y, st.t, this.rise) / (this.rise * 1.05) * 3.2; // illustrative metres
