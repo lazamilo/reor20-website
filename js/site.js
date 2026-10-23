@@ -47,7 +47,7 @@
   /* ---------- Hero: terrain → flood → simulated depth ---------- */
   const hero = $('#top'), media = $('#heroMedia'), copy = $('#heroCopy');
   const lFlood = $('.hl-flood'), lDepth = $('.hl-depth'), scan = $('.hero-scan');
-  const stages = $$('#heroStages li'), caps = $$('.hero-captions .cap'), legend = $('#heroLegend');
+  const stages = $$('#heroStages li'), legend = $('#heroLegend');
   let heroStage = -1;
   function updateHero() {
     const r = hero.getBoundingClientRect();
@@ -70,17 +70,14 @@
     if (s !== heroStage) {
       heroStage = s;
       stages.forEach((li, i) => li.classList.toggle('on', i <= s));
-      caps.forEach((c, i) => c.classList.toggle('on', i === s));
       legend.classList.toggle('on', s === 2);
     }
-    hero.classList.toggle('no-cap', p < .04);
   }
   if (reduced) {
     // No scroll-linked choreography: show the simulated-depth frame as a calm still.
     hero.style.height = 'auto';
     lDepth.style.clipPath = 'none';
     stages.forEach(li => li.classList.add('on'));
-    caps.forEach((c, i) => c.classList.toggle('on', i === 2));
     legend.classList.add('on');
     lDepth.style.opacity = 0; // keep terrain behind headline for legibility
   }

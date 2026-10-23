@@ -166,17 +166,13 @@ ul,ol{list-style:none}
 .hero-lead{margin-top:28px;max-width:44ch;font-size:clamp(1.0625rem,1rem + .4vw,1.3125rem);line-height:1.5;color:rgba(238,243,247,.82);text-wrap:pretty}
 .hero-lead strong{display:block;margin-top:10px;font-weight:600;color:var(--white)}
 .hero-ctas{display:flex;flex-wrap:wrap;gap:12px;margin-top:36px}
-.hero-hud{position:absolute;left:0;right:0;bottom:0;display:grid;grid-template-columns:auto 1fr auto;align-items:end;gap:20px 40px;padding-bottom:28px}
+.hero-hud{position:absolute;left:0;right:0;bottom:0;display:grid;grid-template-columns:auto auto;justify-content:space-between;align-items:end;gap:20px 40px;padding-bottom:28px}
 .stages{display:flex;gap:4px}
 .stages li{position:relative;padding:10px 14px 0 0;min-width:118px;font-family:var(--mono);font-weight:700;font-size:.625rem;letter-spacing:.04em;text-transform:uppercase;color:var(--on-d-3);border-top:1px solid var(--line-d2);transition:color .5s var(--ease)}
 .stages li span{display:block;color:inherit;opacity:.7;margin-bottom:2px}
 .stages li::before{content:"";position:absolute;left:0;top:-1px;height:1px;width:0;background:var(--d1);transition:width .6s var(--ease)}
 .stages li.on{color:var(--on-d)}
 .stages li.on::before{width:100%}
-.hero-captions{position:relative;min-height:1.6em;align-self:end}
-.hero-captions .cap{position:absolute;left:0;right:0;bottom:0;font-size:1rem;color:var(--on-d);opacity:0;transform:translateY(8px);transition:opacity .6s var(--ease),transform .6s var(--ease)}
-.hero-captions .cap.on{opacity:1;transform:none}
-.no-cap .hero-captions{visibility:hidden}
 .legend{display:grid;grid-template-columns:auto 120px;grid-template-rows:auto auto;gap:6px 12px;align-items:center}
 .legend .mono{font-size:.625rem;color:var(--on-d-2)}
 .legend .mono:first-child{grid-row:span 2}
@@ -466,8 +462,7 @@ ul,ol{list-style:none}
 @media (max-width:900px){
   .js .hero{height:230vh}
   .hero-hud{grid-template-columns:1fr auto;padding-bottom:20px}
-  .hero-captions{grid-column:1/-1;grid-row:1}
-  .bt-head .h2,.bt-copy,.dc-head .h2,.dc-head .lead,.tr-head .h3{grid-column:1/-1}
+    .bt-head .h2,.bt-copy,.dc-head .h2,.dc-head .lead,.tr-head .h3{grid-column:1/-1}
   .bt-copy{margin-top:32px}
   .compare{grid-template-columns:1fr;gap:48px}
   .specs{grid-template-columns:1fr}
