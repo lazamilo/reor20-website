@@ -7,6 +7,7 @@
 @font-face{font-family:"Maison Neue";src:url(../fonts/MaisonNeue-Medium.otf) format("opentype");font-weight:500;font-display:swap}
 @font-face{font-family:"Maison Neue";src:url(../fonts/MaisonNeue-Demi.otf) format("opentype");font-weight:600;font-display:swap}
 @font-face{font-family:"Maison Neue";src:url(../fonts/MaisonNeue-Bold.otf) format("opentype");font-weight:700;font-display:swap}
+@font-face{font-family:"Maison Neue Extended";src:url(../fonts/MaisonNeueExtended-Bold.otf) format("opentype");font-weight:700;font-display:swap}
 @font-face{font-family:"Maison Neue Mono";src:url(../fonts/MaisonNeueMono-Regular.otf) format("opentype");font-weight:400;font-display:swap}
 
 :root{
@@ -81,6 +82,7 @@ ul,ol{list-style:none}
 .eyebrow{font-family:var(--mono);font-size:.75rem;letter-spacing:.12em;text-transform:uppercase;color:var(--teal-ink);margin-bottom:22px}
 .eyebrow-d{color:var(--cyan)}
 .eyebrow .by{color:var(--on-d-2)}
+.hero-eyebrow{font-family:"Maison Neue Extended",var(--sans);font-weight:700;font-size:.75rem;letter-spacing:.14em;text-transform:uppercase}
 .tag-illus{font-family:var(--mono);font-size:.6875rem;letter-spacing:.06em;text-transform:uppercase;color:var(--on-d-3)}
 .light .tag-illus,.tag-l{color:#7C8792}
 
